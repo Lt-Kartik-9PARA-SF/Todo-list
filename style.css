@@ -87,6 +87,7 @@ footer{
     }
     .taskName{
         width: fit-content;
+        word-wrap: break-word;
         
     }
     .tasks{
