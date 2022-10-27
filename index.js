@@ -6,7 +6,6 @@ let date = new Date();
 let topText = document.querySelector("#headerText");
 topText.innerHTML= `${topText.innerText}  ${date}`;
 function remove(event){
-    num--;
  event.parentElement.remove();
 }
 
@@ -22,6 +21,7 @@ function addTask(){
         alert("Please Enter a Task First");
         return;
     }
+    
    num++;
 let newDiv = document.createElement("div");
 newDiv.className ="tasks";
