@@ -45,7 +45,8 @@ header{
     display: flex;
     justify-content: space-between;
     text-align: left;
-    border: 2px dotted black;
+    border-radius: 5px;
+    border: 1px solid black;
 }
 .taskName{
     min-width: 65%;
@@ -86,8 +87,7 @@ footer{
     }
     .taskName{
         width: fit-content;
-        background-color: blue;
-        border: 2px dotted red;
+        
     }
     .tasks{
         min-width: fit-content;
