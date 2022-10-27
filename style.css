@@ -3,7 +3,7 @@ body{
     flex-direction: column;
     align-items: center;
     background-color: rgb(138, 43, 226);
-    background-image: url('https://picsum.photos/1350/1000');
+   background-image: url('https://picsum.photos/1350/');
 }
 header{
     width: 100vw;
@@ -21,6 +21,7 @@ header{
     flex-direction: column;
    
 }
+
 #add-btn{
     max-width: 20%;
     margin-top: .5rem;
@@ -39,6 +40,7 @@ header{
     border-radius: 5px;
 }
 .tasks{
+    box-sizing: border-box;
     margin-top: 1rem;
     display: flex;
     justify-content: space-between;
@@ -46,7 +48,7 @@ header{
     border: 2px dotted black;
 }
 .taskName{
-    min-width: 80%;
+    min-width: 65%;
     text-align: center;
 }
 .removeBtn{
@@ -71,3 +73,25 @@ footer{
     background-color: black;
     color: white;
 }
+@media screen and (max-width: 1000px) {
+    body{
+        background-color: aliceblue;
+        background-size: contain;
+    }
+    header{
+        width: 100vw;
+    }
+    #display{
+        width: 85vw;
+    }
+    .taskName{
+        width: fit-content;
+        background-color: blue;
+        border: 2px dotted red;
+    }
+    .tasks{
+        min-width: fit-content;
+        display: flex;
+        justify-content: center;
+    }
+  }
