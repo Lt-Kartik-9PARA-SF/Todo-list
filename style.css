@@ -100,6 +100,7 @@ footer{
     text-align: center;
     background-color: black;
     color: white;
+    margin-top:1rem ;
 }
 
 @media screen and (max-width: 1000px) {
@@ -120,7 +121,13 @@ footer{
     .tasks{
         max-width:100%;
         display: flex;
-        background-color: rgb(179, 117, 41);
+        flex-direction: column;
+
         word-wrap: break-word;
     }
+    .saveBtn,.editBtn,.completeBtn,.removeBtn{
+        max-width: 5rem;
+       align-self: center;
+    }
+    
   }
