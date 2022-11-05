@@ -45,7 +45,7 @@ function addTask() {
     num++;
     let newDiv = document.createElement("div");
     newDiv.className = "tasks";
-    newDiv.innerHTML = `<span>Task no ${num}</span> <p class="taskName"> <b> ${userInput.value}</b></p><button onclick="nonEdit(this)" class="saveBtn">Save</button> <button onclick="editableP(this)" class="editBtn" >Edit</button> <button class="completeBtn" onclick="completed(this)">Mark Completed</button> <button onclick="remove(this)" class="removeBtn">Remove</button> `
+    newDiv.innerHTML = `<span>Task no ${num}</span> <p class="taskName"> ${userInput.value}</p><button onclick="nonEdit(this)" class="saveBtn">Save</button> <button onclick="editableP(this)" class="editBtn" >Edit</button> <button class="completeBtn" onclick="completed(this)">Mark Completed</button> <button onclick="remove(this)" class="removeBtn">Remove</button> `
     taskDisplay.appendChild(newDiv);
     userInput.value = "";
 }
