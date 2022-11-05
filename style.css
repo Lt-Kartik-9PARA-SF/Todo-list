@@ -1,3 +1,5 @@
+
+
 body{
     display: flex;
     flex-direction: column;
@@ -12,6 +14,9 @@ header{
     font-size: 2rem;
     text-align: center;
     height: 10vh;
+}
+#headerText{
+    text-align: center;
 }
 #display{
    background-color: rgba(231, 225, 236, 0.575);
@@ -29,6 +34,7 @@ header{
     border-radius: 5px;
     border: none;
     background-color: aqua;
+    cursor: pointer;
 }
 #add-btn:hover{
     background-color: green;
@@ -51,23 +57,44 @@ header{
 .taskName{
     min-width: 60%;
     text-align: center;
+    word-wrap: break-word;
+}
+span{
+    text-align: center;
+}
+.saveBtn{
+    display: none;
+    border: none;
+    cursor: pointer;
+    background-color: rgb(88, 223, 88);
+    border-radius: 5px;
+    height: 2rem;
+}
+.editBtn{
+    background-color: aqua;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    height: 2rem;
 }
 .removeBtn{
     background-color: red;
-   
+    cursor: pointer;
     border: none;
     color: white;
     border-radius: 5px;
     height: 2rem;
 }
 .completeBtn{
-    
+    cursor: pointer;
     border: none;
     background-color: green;
     color: white;
     border-radius: 5px;
     height: 2rem;
 }
+
+
 footer{
     width: 100%;
     text-align: center;
