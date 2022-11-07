@@ -40,12 +40,13 @@ function completed(event) {
     let mm = date1.getMinutes();
     let ss = date1.getSeconds();
     event.parentElement.style.background = "green";
-    event.parentElement.firstChild.nextElementSibling.innerHTML = event.parentElement.firstChild.nextElementSibling.innerText + `<br/><p class="taskCompletion"> Completed at ${hh}:${mm}:${ss}<p/>  `;
+    event.parentElement.firstChild.nextElementSibling.innerHTML = event.parentElement.firstChild.nextElementSibling.innerText + `<p class="taskCompletion"> Completed at ${hh}:${mm}:${ss}<p/>  `;
 
     event.innerText = "";
     event.nextElementSibling.style.display = "none";
     event.previousElementSibling.style.display = "none";
     event.parentElement.style.color = "white";
+    event.parentElement.style.height = "12vh";
    
     
 }
