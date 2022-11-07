@@ -16,6 +16,12 @@ function updateClock(){
     let hh = date1.getHours();
     let mm = date1.getMinutes();
     let ss = date1.getSeconds();
+    if(mm<10){
+        mm = "0"+mm;
+    }
+    if(ss<10){
+        ss = "0"+ss;
+    }
     dateDisplay.innerText = todayDate;
     if(hh>=12){
         clock.innerHTML = `${hh}:${mm}:${ss} PM`;
