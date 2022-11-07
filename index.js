@@ -60,12 +60,15 @@ function editableP(event) {
     event.style.display = "none";
     event.parentElement.firstChild.nextElementSibling.setAttribute("contenteditable", true);
     event.parentElement.firstChild.nextElementSibling.focus();
+    event.parentElement.firstChild.nextElementSibling.style.color = "white";
      event.previousElementSibling.style.display = "block";
 }
 function nonEdit(event) {
     console.log("worked");
     event.parentElement.firstChild.nextElementSibling.setAttribute("contenteditable", false);
+    event.parentElement.firstChild.nextElementSibling.style.color = "black";
     event.nextElementSibling.style.display = "block";
+    
     event.style.display = "none";
 }
 function addTask() {
