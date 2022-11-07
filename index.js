@@ -8,16 +8,41 @@ let saveButton = document.querySelector("#saveBtn");
 let editButton = document.querySelector("#editBtn");
 let header = document.querySelector("header");
 let todayDate = date.toDateString();
+let dateDisplay = document.querySelector("#date")
 
-topText.innerHTML = `${topText.innerText}  ${todayDate}`;
+let clock = document.querySelector("#clock");
+function updateClock(){
+    let date1 = new Date();
+    let hh = date1.getHours();
+    let mm = date1.getMinutes();
+    let ss = date1.getSeconds();
+    dateDisplay.innerText = todayDate;
+    if(hh>=12){
+        clock.innerHTML = `${hh}:${mm}:${ss} PM`;
+    }
+    else{
+        clock.innerHTML = `${hh}:${mm}:${ss} AM`;
+    }
+    
+    console.log('working');
+}
+setInterval(updateClock,1000);
+
+
+
 function remove(event) {
     event.parentElement.remove();
 }
 
 function completed(event) {
-    
+    let date1 = new Date();
+    let hh = date1.getHours();
+    let mm = date1.getMinutes();
+    let ss = date1.getSeconds();
     event.parentElement.style.background = "green";
-    event.innerText = "Task Completed  ";
+    event.parentElement.firstChild.nextElementSibling.innerHTML = event.parentElement.firstChild.nextElementSibling.innerText + `<br/><p class="taskCompletion"> Completed at ${hh}:${mm}:${ss}<p/>  `;
+
+    event.innerText = "";
     event.nextElementSibling.style.display = "none";
     event.previousElementSibling.style.display = "none";
     event.parentElement.style.color = "white";

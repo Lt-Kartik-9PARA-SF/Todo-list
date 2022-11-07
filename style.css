@@ -14,9 +14,22 @@ header{
     font-size: 2rem;
     text-align: center;
     height: 10vh;
+    display: flex;
 }
-#headerText{
+#headerTextName{
     text-align: center;
+    flex-grow: 12;
+}
+#clock{
+flex-grow: 1;
+font-size: 1.5rem;
+}
+#date{
+    font-size: 1.5rem;
+}
+#dateAndTime{
+    display: flex;
+    flex-direction: column;
 }
 #display{
    background-color: rgba(231, 225, 236, 0.575);
@@ -26,6 +39,7 @@ header{
     flex-direction: column;
    
 }
+
 
 #add-btn{
     max-width: 20%;
@@ -94,7 +108,9 @@ span{
     height: 2rem;
 }
 
-
+.taskCompletion{
+    color: black;
+}
 footer{
     width: 100%;
     text-align: center;
@@ -106,10 +122,12 @@ footer{
 @media screen and (max-width: 1000px) {
     body{
         background-color: aliceblue;
-        background-size: contain;
+        background-size: cover;
+        
     }
     header{
-        width: 100vw;
+        width: 96vw;
+        height: fit-content;
     }
     #display{
         width: 85vw;
@@ -122,12 +140,20 @@ footer{
         max-width:100%;
         display: flex;
         flex-direction: column;
-
         word-wrap: break-word;
     }
     .saveBtn,.editBtn,.completeBtn,.removeBtn{
         max-width: 5rem;
        align-self: center;
     }
-    
+    #headerTextName{
+        flex-grow: 10;
+    }
+    #clock{
+        flex-grow: 1;
+        font-size: 1rem;
+    }
+    #date{
+        font-size: 1rem;
+    }
   }
